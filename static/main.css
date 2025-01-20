@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    font-family: "Roboto";
+    margin: 0;
+    padding-bottom: 30px;
+}
+ .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    margin-bottom:40px ;
+ }
+ .header nav ul{
+    display: flex;
+    align-items: center;
+    gap: 13px;
+ }
+ .header nav ul li{
+    list-style: none;
+ }
+
+ .hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    text-align: center;
+    margin-bottom: 40px;
+ }
+ .hero h1{
+    font-size: 50px;
+    color: rgb(12, 25, 40);
+ }
+ .hero button{
+    background-color: hsl(207, 97%, 49%);
+    border: none;
+    padding: 9px 40px;
+    border-radius: 4px;
+    color: white;
+ }
+.col{
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+ max-width: 800px;
+ gap: 21px;
+ margin: auto;
+}
+.icon-box{
+    
+    box-shadow: 0 0 5px rgba(159, 159, 159, 0.4);
+    padding: 36px 16px;
+    font-family: Arial;
+}
+.description{
+    color: gray;
+    font-size: 13px;
+}
+.icon-box i{
+    color: gray;
+    font-size: 24px;
+}
+.icon-box button{
+    background-color: hsl(207, 97%, 49%);
+    border: none;
+    padding: 3px 14px;
+    color: white;
+    border-radius: 3px;
+}
+.title a{
+    text-decoration: none;
+}

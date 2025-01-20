@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="{% static 'signup.css'%}">
+</head>
+<body>
+    <div class="d-signup">
+        <div class="signup-page">
+            <h1 class="signup-page-title">Sign Up</h1>
+            <form method="POST" action="/signup/" class="form">
+                {% csrf_token %}
+                <div class="input-box">
+                    <label for="">Username</label><br>
+                    <input type="text" name="username" required placeholder="Enter your username">
+                </div>
+                <div class="input-box">
+                    <label for="">Email</label><br>
+                    <input type="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="input-box">
+                    <label for="">password</label><br>
+                    <input type="password" name="password" required placeholder="Enter password">
+                </div>
+                <div class="submit-container">
+                    <input class="submit" type="submit" value="register">
+                </div> 
+            </form>
+            <div class="already-account">Already have account  <a href="{% url 'signin'%}">signin</a></div>
+            <span>
+                {% for m in messages%}
+                <span style="color: red; margin-top: 14px;font-size: 13px;">{{m}}</span>
+                {% endfor %}
+            </span>
+        </div>
+        <div class="create-account">
+            <h1>Sign in</h1>
+            <p>Signin if already have an account</p>
+            <a href="{% url 'signin'%}">signin</a>
+        </div>
+    </div>
+</body>
+</html>

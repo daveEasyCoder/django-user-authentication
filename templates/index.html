@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'main.css'%}">
+  <link rel="stylesheet" href="{% static 'product.css'%}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="header">
+         <h2>One page </h2>
+         <nav>
+          <ul>
+            <li>Home</li>
+            <li>service</li>
+            <li>blog</li>
+            <li>contact</li>
+            {% if user.is_authenticated %}
+              <li><a class="logout" href="UserLogout">Logout</a></li>
+            {% else %}
+               <li><a class="login" href="signup">Register</a></li>
+            {% endif %}
+          </ul>
+         </nav>
+    </div>
+  </header>
+
+
+  <div class="hero">
+    <div>
+      <h1>Welcome to the <br> Home page</h1>
+        <p>we are the team of talented designer</p>
+        <button>Get started</button>
+    </div>
+  </div>
+
+
+<!-- Prodecut section start -->
+<div class="product-section">
+  <div class="product-item">
+    <div class="item-pic">
+      <img class="item-image" src="media/product_img/wallpaper.jpg" />
+    </div>
+    <div class="product-item-footer">
+      <h3 class="font-bold">Iphone</h3>
+      <p class="item-price">price: $1200</p>
+      <a href="#" class="cart-button add-to-cart">Add To Cart</a>
+      <a href="details.html" class="cart-button details-btn">See details</a>
+    </div>
+  </div>
+  <div class="product-item">
+    <div class="item-pic">
+      <img class="item-image" src="media/product_img/wallpaper.jpg" />
+    </div>
+    <div class="product-item-footer">
+      <h3 class="font-bold">Sumnsung</h3>
+      <p class="item-price">price: $1200</p>
+      <a href="#" class="cart-button add-to-cart">Add To Cart</a>
+      <a href="details.html" class="cart-button details-btn">See details</a>
+    </div>
+  </div>
+  <div class="product-item">
+    <div class="item-pic">
+      <img class="item-image" src="media/product_img/wallpaper.jpg" />
+    </div>
+    <div class="product-item-footer">
+      <h3 class="font-bold">ZTE Blade A33</h3>
+      <p class="item-price">price: $1200</p>
+      <a href="#" class="cart-button add-to-cart">Add To Cart</a>
+      <a href="details.html" class="cart-button details-btn">See details</a>
+    </div>
+  </div>
+  
+</div>
+<!-- Prodecut section start -->
+</body>
+</html>
