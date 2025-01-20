@@ -1,5 +1,6 @@
 # Django User Authentication
-
+### Login Page
+![Login Page](signin.png)
 This project demonstrates how to implement user authentication (login, logout) in Django. It includes the following features:
 
 - User Login
